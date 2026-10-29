@@ -1,0 +1,235 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080914">
+  <meta name="description" content="Turn long videos into short clips with ViralCut AI.">
+  <title>ViralCut — AI Video Clipping</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="#home" class="logo">
+        <span class="logo-icon">▶</span>
+        Viral<span>Cut</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#features">Features</a>
+        <a href="#how">How it works</a>
+      </nav>
+
+      <a href="#create" class="btn btn-secondary">Get Started ↗</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+
+        <div class="hero-content">
+          <div class="eyebrow">
+            <span class="status-dot"></span>
+            AI-POWERED VIDEO CLIPPING
+          </div>
+
+          <h1>
+            Turn Long Videos Into
+            <span class="gradient-text">Viral-Style Clips.</span>
+          </h1>
+
+          <p class="hero-description">
+            Find the moments worth watching. Transform long videos into
+            short, shareable clips for YouTube Shorts, Instagram Reels
+            and TikTok.
+          </p>
+
+          <div class="mini-features">
+            <span><b>✦</b> AI highlights</span>
+            <span><b>⌘</b> Smart clipping</span>
+            <span><b>▤</b> Captions-ready</span>
+          </div>
+
+          <section class="upload-card" id="create">
+            <h2 class="card-heading">Create your clips</h2>
+
+            <label class="input-label" for="videoInput">Upload your video</label>
+
+            <label class="drop-zone" id="dropZone" for="videoInput">
+              <span class="upload-icon">↑</span>
+              <strong id="fileLabel">Drop your video here or browse files</strong>
+              <small>Choose a video you own or have permission to edit.</small>
+              <small>MP4, WebM and other supported video formats</small>
+            </label>
+
+            <input type="file" id="videoInput" accept="video/*" hidden>
+
+            <video id="preview" controls hidden></video>
+
+            <div class="divider"><span>OR USE A VIDEO LINK</span></div>
+
+            <label class="input-label" for="videoUrl">YouTube URL</label>
+            <input
+              class="url-input"
+              type="url"
+              id="videoUrl"
+              placeholder="Paste a YouTube video link..."
+              autocomplete="url"
+            >
+
+            <p class="hint">
+              The video or its transcript must be accessible, and you must
+              have permission to process the content.
+            </p>
+
+            <div class="controls">
+              <div class="duration-group">
+                <label class="input-label">Clip duration</label>
+                <div class="duration-options">
+                  <button class="duration active" data-duration="30" type="button">30 sec</button>
+                  <button class="duration" data-duration="45" type="button">45 sec</button>
+                  <button class="duration" data-duration="60" type="button">60 sec</button>
+                </div>
+              </div>
+
+              <button class="btn btn-primary" id="findBtn" type="button">
+                ✦ Find Viral Moments <span>→</span>
+              </button>
+            </div>
+
+            <div id="status" role="status" aria-live="polite" hidden></div>
+          </section>
+        </div>
+
+        <div class="visual" aria-label="Illustration of video clips">
+          <div class="visual-glow"></div>
+
+          <div class="float-card float-left">
+            <small>AI DETECTION</small>
+            <strong>Interesting moment</strong>
+            <span>✦ Highlight found</span>
+          </div>
+
+          <div class="visual-main">
+            <div class="visual-screen">
+              <span class="play-badge">▶</span>
+              <div class="video-caption">
+                THE MOMENT<br>
+                <span>EVERYONE</span><br>
+                REMEMBERS.
+              </div>
+              <div class="video-timeline">
+                <span></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="float-card float-right">
+            <small>YOUR NEXT CLIP</small>
+            <strong>Vertical format</strong>
+            <span>▶ Ready to preview</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-label">BUILT FOR CREATORS</span>
+          <h2>Make every moment <span class="gradient-text">count.</span></h2>
+          <p>Everything you need for a simpler video clipping workflow.</p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card">
+            <div class="feature-icon">✦</div>
+            <h3>AI Moment Detection</h3>
+            <p>Identify interesting stories, strong hooks and memorable moments.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">⌘</div>
+            <h3>Automatic Clipping</h3>
+            <p>Turn selected timestamps into short clips with less manual editing.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">▤</div>
+            <h3>Captions & Reframing</h3>
+            <p>Prepare subtitles and vertical framing for short-form platforms.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">↓</div>
+            <h3>Easy Export</h3>
+            <p>Preview and download generated MP4 clips when processing is connected.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="how">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-label">HOW IT WORKS</span>
+          <h2>From long video to short clip.</h2>
+          <p>A simple workflow designed for busy creators.</p>
+        </div>
+
+        <div class="steps-grid">
+          <article class="step-card">
+            <span class="step-number">01</span>
+            <h3>Choose your video</h3>
+            <p>Upload a video you have permission to process, or provide an eligible link.</p>
+          </article>
+
+          <article class="step-card">
+            <span class="step-number">02</span>
+            <h3>Find the highlights</h3>
+            <p>AI analyzes accessible content to suggest potentially engaging moments.</p>
+          </article>
+
+          <article class="step-card">
+            <span class="step-number">03</span>
+            <h3>Export your clips</h3>
+            <p>Review the suggested moments and download your clips once processing is available.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="bottom-cta">
+      <div class="container cta-content">
+        <h2>Your next great clip starts here.</h2>
+        <p>Spend less time searching. Focus more on creating.</p>
+        <a href="#create" class="btn btn-primary">Get Started Free →</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a href="#home" class="logo">
+        <span class="logo-icon">▶</span>
+        Viral<span>Cut</span>
+      </a>
+      <p>Made for creators. Powered by your ideas.</p>
+      <p>© <span id="year"></span> ViralCut</p>
+    </div>
+  </footer>
+
+</body>
+</html>
